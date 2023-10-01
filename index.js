@@ -1,7 +1,7 @@
 "use strict";
 
 const codes = require("./codes.json");
-const supportedLocales = require("./supportedLocales.json");
+const supportedLocales = Object.keys(require("./supported-locales"));
 const removeDiacritics = require("diacritics").remove;
 const registeredLocales = {};
 

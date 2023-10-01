@@ -1,10 +1,8 @@
 var library = require("./index");
+var supportedLocales = require("./supported-locales");
 
-var supportedLocales = library.getSupportedLanguages()
-
-for (var i = 0; i < supportedLocales.length; i++) {
-  var locale = require("./langs/" + supportedLocales[i] + ".json")
-  library.registerLocale(locale);
+for (var requireLocale of Object.values(supportedLocales)) {
+  library.registerLocale(requireLocale());
 }
 
 module.exports = library;
