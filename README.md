@@ -256,7 +256,7 @@ console.log(
 To add a language:
 
 - add a json file under [langs/](langs)
-- add the language to the list in supportedLocales.json at the top
+- add the language to the list in supported-locales.js at the top
 - add language to section **Supported languages** in [README.md](#supported-languages-iso-639-1)
 - add language to keywords in [package.json](package.json)
 - run `npm run lint` and `npm test`
